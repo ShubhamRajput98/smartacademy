@@ -16,7 +16,7 @@ const Achieve = () => {
 
                         <p className='text-[#EDEDED] font-medium text-sm mt-2 leading-[
 21px] xmd:text-center'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
-                            Lorem Ipsum has been the industry's standard dummy <br />
+                            Lorem Ipsum has been the industrys standard dummy <br />
                             text ever since the 1500s. </p>
                     </div>
 
