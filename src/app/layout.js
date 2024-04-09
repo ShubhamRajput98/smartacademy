@@ -1,7 +1,11 @@
-import { Inter } from "next/font/google";
+import { Poppins, Fuzzy_Bubbles, Montserrat } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Poppins({ weight: ['200', '300', '400', '500', '600', '700', '800', '900'], subsets: ["latin"] });
+
+const fuzzyBubbles = Fuzzy_Bubbles({ weight: ['400', '700'], subsets: ["latin"], variable: '--fuzzy-bubbles' });
+const montserrat = Montserrat({ weight: ['200', '300', '400', '500', '600', '700', '800', '900'], subsets: ["latin"], variable: '--montserrat' });
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +15,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <Head>
+
+      </Head>
+      <body className={`${inter.className} ${fuzzyBubbles.variable} ${montserrat.variable}`}>{children}</body>
     </html>
   );
 }

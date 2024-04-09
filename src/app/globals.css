@@ -2,32 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.font-fuzzy {
+    font-family: var(--fuzzy-bubbles);
+    font-weight: 700;
+    font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.font-montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.font-futura {
+    font-family: "Futura", sans-serif;
+    font-style: normal;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+
+.mySwiper-horizontal {
+    height: 114px !important;
+}
+
+.gradeant {
+    background: linear-gradient(180deg, #9C79B3 48.52%, #8A61A5 75.96%);
+}
+
+
+
+@media screen and (max-width:1280px) {
+    .xl-pl-3 {
+        padding-left: 3em !important;
+    }
+}
+
+@media screen and (max-width:1439px) {
+    .lg-pl-3 {
+        padding-left: 7em !important;
+    }
+
+    .line {
+        top: 146px !important;
+    }
+
+    .line>img {
+        width: 94px;
+    }
+}
+
+
+@media screen and (max-width:1279px) {
+    .xl-pl-3 {
+        padding-left: 0em !important;
+    }
+
+    .navlinks {
+        position: fixed;
+        left: -200%;
+        top: 0;
+        width: 280px;
+        height: 100vh;
+        z-index: 50;
+        flex-direction: column;
+        background: white;
+        align-items: start;
+        padding: 1em;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navlinks.active {
+        left: 0;
+        transition: all 0.3s ease-in-out;
+    }
 }
